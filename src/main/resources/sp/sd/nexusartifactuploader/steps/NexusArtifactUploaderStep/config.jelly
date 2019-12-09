@@ -1,0 +1,30 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:c="/lib/credentials">
+    <f:section title="Nexus Details">
+        <f:entry title="Nexus Version" field="nexusVersion">
+            <f:select />
+        </f:entry>
+        <f:entry title="Protocol" field="protocol">
+            <f:select />
+        </f:entry>
+        <f:entry title="Nexus URL" field="nexusUrl">
+            <f:textbox/>
+        </f:entry>
+        <f:entry title="${%Credentials}" field="credentialsId">
+            <c:select/>
+        </f:entry>
+        <f:entry title="GroupId" field="groupId">
+            <f:textbox/>
+        </f:entry>
+        <f:entry title="Version" field="version">
+            <f:textbox/>
+        </f:entry>
+        <f:entry title="Repository" field="repository">
+            <f:textbox/>
+        </f:entry>
+        <f:entry title="Artifacts">
+            <f:repeatableProperty minimum="0" field="artifacts" header="Artifact"/>
+        </f:entry>
+    </f:section>
+</j:jelly>

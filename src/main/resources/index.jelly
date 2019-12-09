@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  This plugin to upload the artifact to Nexus Repository.
+</div>
